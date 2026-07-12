@@ -17,11 +17,11 @@ using Newtonsoft.Json.Linq;
 namespace ModNamespace
 {
     [BepInPlugin(ModGUID, ModName, ModVersion)]
-    [BepInDependency("net.cucorelib", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency("net.cucorelib", BepInDependency.DependencyFlags.HardDependency)] 
     public class Plugin : BaseUnityPlugin
     {
         public const string ModGUID = "com.yourName.modName";
-        public const string ModName = "My First Casualties: Unknown Mod";
+        public const string ModName = "My First Casualties: Unknown Mod"; // To change .dll name, change the name in vars.targets
         public const string ModVersion = "1.0.0";
 
         internal static new ManualLogSource Logger;
@@ -36,23 +36,19 @@ namespace ModNamespace
             _harmony.PatchAll();
             Logger.LogInfo($"Plugin {ModName} is loaded!");
 
-            ContentReloadManager.EnableHotReload(ModGUID);
+            DoStuff();
+            ContentReloadManager.EnableHotReload(ModGUID); // Required for hot reload, put any registry registrations in the RegisterReloadable method below
             RegisterReloadable();
         }
 
         private void RegisterReloadable()
         {
-            DoStuff();
+    
         }
 
         private void DoStuff()
         {
-        }
-
-        public void OnDestroy()
-        {
-            _harmony.UnpatchSelf();
-            Instance = null!;
+            
         }
     }
 }

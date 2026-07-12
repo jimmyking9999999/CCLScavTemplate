@@ -1,7 +1,8 @@
 <Project>
   <PropertyGroup>
-    <!--Set this to your project's name-->
+    <!--Set this to your project's name. This influences the dll name -->
     <ProjectName>Template</ProjectName>
+
     <!--Override this manually if auto-detection misses your setup.-->
     <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('C:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo')">C:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
     <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('C:\Program Files\Steam\steamapps\common\Casualties Unknown Demo')">C:\Program Files\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
@@ -23,8 +24,10 @@
     <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('H:\Steam\steamapps\common\Casualties Unknown Demo')">H:\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
     <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('$(HOME)/.steam/steam/steamapps/common/Casualties Unknown Demo')">$(HOME)/.steam/steam/steamapps/common/Casualties Unknown Demo</BaseGamePath>
     <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('$(HOME)/.local/share/Steam/steamapps/common/Casualties Unknown Demo')">$(HOME)/.local/share/Steam/steamapps/common/Casualties Unknown Demo</BaseGamePath>
-    <BepInExDir>$(BaseGamePath)/BepInEx</BepInExDir>
+    
+    <BepInExDir>$(BaseGamePath)/BepInEx</BepInExDir> <!--Specifically, these two lines -->
     <GameAssembliesDir>$(BaseGamePath)/CasualtiesUnknown_Data/Managed</GameAssembliesDir>
+    
     <CUCoreLibDllPath Condition="'$(CUCoreLibDllPath)' == '' and Exists('$(BepInExDir)/plugins/CUCoreLib.dll')">$(BepInExDir)/plugins/CUCoreLib.dll</CUCoreLibDllPath>
     <CUCoreLibDllPath Condition="'$(CUCoreLibDllPath)' == '' and Exists('$(BepInExDir)/plugins/CUCoreLib/CUCoreLib.dll')">$(BepInExDir)/plugins/CUCoreLib/CUCoreLib.dll</CUCoreLibDllPath>
     <CUCoreLibDllPath Condition="'$(CUCoreLibDllPath)' == '' and Exists('$(MSBuildThisFileDirectory)..\CUCoreLib\bin\Debug\CUCoreLib.dll')">$(MSBuildThisFileDirectory)..\CUCoreLib\bin\Debug\CUCoreLib.dll</CUCoreLibDllPath>

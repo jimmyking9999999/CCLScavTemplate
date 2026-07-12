@@ -6,7 +6,6 @@ using CUCoreLib.Data;
 using CUCoreLib.Helpers;
 using CUCoreLib.Registries;
 using CUCoreLib.Saving;
-using Newtonsoft.Json.Linq;
 
 namespace ModNamespace
 {
@@ -19,7 +18,7 @@ namespace ModNamespace
             [HarmonyPostfix]
             private static void StartPatch()
             {
-                ConsoleScript.instance.LogToConsole("Hello World!");
+                ConsoleScript.instance.LogToConsole($"Loaded {Plugin.ModName} (v{Plugin.ModVersion})");
             }
         }
     }
