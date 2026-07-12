@@ -2,9 +2,32 @@
   <PropertyGroup>
     <!--Set this to your project's name-->
     <ProjectName>Template</ProjectName>
-    <!--Set this to the game's main folder-->
-    <BaseGamePath>C:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <!--Override this manually if auto-detection misses your setup.-->
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('C:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo')">C:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('C:\Program Files\Steam\steamapps\common\Casualties Unknown Demo')">C:\Program Files\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('C:\Steam\steamapps\common\Casualties Unknown Demo')">C:\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('D:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo')">D:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('D:\Program Files\Steam\steamapps\common\Casualties Unknown Demo')">D:\Program Files\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('D:\Steam\steamapps\common\Casualties Unknown Demo')">D:\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('E:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo')">E:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('E:\Program Files\Steam\steamapps\common\Casualties Unknown Demo')">E:\Program Files\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('E:\Steam\steamapps\common\Casualties Unknown Demo')">E:\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('F:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo')">F:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('F:\Program Files\Steam\steamapps\common\Casualties Unknown Demo')">F:\Program Files\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('F:\Steam\steamapps\common\Casualties Unknown Demo')">F:\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('G:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo')">G:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('G:\Program Files\Steam\steamapps\common\Casualties Unknown Demo')">G:\Program Files\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('G:\Steam\steamapps\common\Casualties Unknown Demo')">G:\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('H:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo')">H:\Program Files (x86)\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('H:\Program Files\Steam\steamapps\common\Casualties Unknown Demo')">H:\Program Files\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('H:\Steam\steamapps\common\Casualties Unknown Demo')">H:\Steam\steamapps\common\Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('$(HOME)/.steam/steam/steamapps/common/Casualties Unknown Demo')">$(HOME)/.steam/steam/steamapps/common/Casualties Unknown Demo</BaseGamePath>
+    <BaseGamePath Condition="'$(BaseGamePath)' == '' and Exists('$(HOME)/.local/share/Steam/steamapps/common/Casualties Unknown Demo')">$(HOME)/.local/share/Steam/steamapps/common/Casualties Unknown Demo</BaseGamePath>
     <BepInExDir>$(BaseGamePath)/BepInEx</BepInExDir>
     <GameAssembliesDir>$(BaseGamePath)/CasualtiesUnknown_Data/Managed</GameAssembliesDir>
+    <CUCoreLibDllPath Condition="'$(CUCoreLibDllPath)' == '' and Exists('$(BepInExDir)/plugins/CUCoreLib.dll')">$(BepInExDir)/plugins/CUCoreLib.dll</CUCoreLibDllPath>
+    <CUCoreLibDllPath Condition="'$(CUCoreLibDllPath)' == '' and Exists('$(BepInExDir)/plugins/CUCoreLib/CUCoreLib.dll')">$(BepInExDir)/plugins/CUCoreLib/CUCoreLib.dll</CUCoreLibDllPath>
+    <CUCoreLibDllPath Condition="'$(CUCoreLibDllPath)' == '' and Exists('$(MSBuildThisFileDirectory)..\CUCoreLib\bin\Debug\CUCoreLib.dll')">$(MSBuildThisFileDirectory)..\CUCoreLib\bin\Debug\CUCoreLib.dll</CUCoreLibDllPath>
+    <CUCoreLibDllPath Condition="'$(CUCoreLibDllPath)' == '' and Exists('$(MSBuildThisFileDirectory)..\CUCoreLib\bin\Release\CUCoreLib.dll')">$(MSBuildThisFileDirectory)..\CUCoreLib\bin\Release\CUCoreLib.dll</CUCoreLibDllPath>
   </PropertyGroup>
 </Project>

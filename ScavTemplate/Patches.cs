@@ -1,7 +1,12 @@
-﻿using System;
+using System;
 using BepInEx;
 using HarmonyLib;
 using UnityEngine;
+using CUCoreLib.Data;
+using CUCoreLib.Helpers;
+using CUCoreLib.Registries;
+using CUCoreLib.Saving;
+using Newtonsoft.Json.Linq;
 
 namespace ModNamespace
 {
