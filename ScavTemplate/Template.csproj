@@ -57,30 +57,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="images\\**\\*.png" />
-    <EmbeddedResource Include="images\\**\\*.jpg" />
-    <EmbeddedResource Include="images\\**\\*.jpeg" />
-    <EmbeddedResource Include="assets\\**\\*.png" />
-    <EmbeddedResource Include="assets\\**\\*.jpg" />
-    <EmbeddedResource Include="assets\\**\\*.jpeg" />
-    <EmbeddedResource Include="**\\images\\**\\*.png" />
-    <EmbeddedResource Include="**\\images\\**\\*.jpg" />
-    <EmbeddedResource Include="**\\images\\**\\*.jpeg" />
-    <EmbeddedResource Include="**\\assets\\**\\*.png" />
-    <EmbeddedResource Include="**\\assets\\**\\*.jpg" />
-    <EmbeddedResource Include="**\\assets\\**\\*.jpeg" />
-    <EmbeddedResource Include="Images\\**\\*.png" />
-    <EmbeddedResource Include="Images\\**\\*.jpg" />
-    <EmbeddedResource Include="Images\\**\\*.jpeg" />
-    <EmbeddedResource Include="Assets\\**\\*.png" />
-    <EmbeddedResource Include="Assets\\**\\*.jpg" />
-    <EmbeddedResource Include="Assets\\**\\*.jpeg" />
-    <EmbeddedResource Include="**\\Images\\**\\*.png" />
-    <EmbeddedResource Include="**\\Images\\**\\*.jpg" />
-    <EmbeddedResource Include="**\\Images\\**\\*.jpeg" />
-    <EmbeddedResource Include="**\\Assets\\**\\*.png" />
-    <EmbeddedResource Include="**\\Assets\\**\\*.jpg" />
-    <EmbeddedResource Include="**\\Assets\\**\\*.jpeg" />
+    <None Remove="images\\**\\*.png;images\\**\\*.jpg;images\\**\\*.jpeg;assets\\**\\*.png;assets\\**\\*.jpg;assets\\**\\*.jpeg" />
+    <Content Remove="images\\**\\*.png;images\\**\\*.jpg;images\\**\\*.jpeg;assets\\**\\*.png;assets\\**\\*.jpg;assets\\**\\*.jpeg" />
+    <EmbeddedResource Include="images\\**\\*.png;images\\**\\*.jpg;images\\**\\*.jpeg;assets\\**\\*.png;assets\\**\\*.jpg;assets\\**\\*.jpeg" />
   </ItemGroup>
 
   <PropertyGroup>

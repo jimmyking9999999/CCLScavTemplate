@@ -20,7 +20,7 @@ A small BepInEx plugin template for Unity modding Casualties Unknown with CUCore
 2. Update the namespace in `Plugin.cs` and `Patches.cs`.
 3. Put startup-only funntions before `ContentReloadManager.EnableHotReload(ModGUID)`.
 4. Put reloadable item/recipe/content registration inside `RegisterReloadable()` / `DoStuff()`.
-5. Place embedded art in `ScavTemplate/images/` or `ScavTemplate/assets/`, then load it with `AssetLoader.LoadEmbeddedSprite(...)`.
+5. Place art files under `images/` or `assets/` to auto-embed them, or set `Build Action = Embedded Resource` manually elsewhere in the project.
 6. Run the game with BepInEx and `CUCoreLib` installed in the plugins folder! ^^
 
 ## Hot Reload Notes
